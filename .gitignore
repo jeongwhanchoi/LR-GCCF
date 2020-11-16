@@ -1,0 +1,13 @@
+#pycache
+./__pycache__
+__pycache__
+code/__pycache__
+code/log
+
+#vscode
+.vscode
+vscode
+
+#log
+log
+
