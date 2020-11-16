@@ -29,7 +29,7 @@ import evaluate
 from shutil import copyfile
 
 
-dataset_base_path='../data/amazon-book'  
+dataset_base_path='data/amazon-book'  
  
 ##gowalla
 user_num=52643
@@ -49,7 +49,7 @@ if (os.path.exists(path_save_base)):
 else:
     os.makedirs(path_save_base)   
 result_file=open(path_save_base+'/results.txt','w+')#('./log/results_gcmc.txt','w+')
-copyfile('./train_amazons.py', path_save_base+'/train_amazons'+run_id+'.py')
+copyfile('code/train_amazons.py', path_save_base+'/train_amazons'+run_id+'.py')
 
 path_save_model_base='../newlossModel/'+dataset+'/s'+run_id
 if (os.path.exists(path_save_model_base)):

@@ -9,7 +9,7 @@ import numpy as np
 import math
 import sys
 
-os.environ["CUDA_VISIBLE_DEVICES"] =','.join(map(str, [2]))
+os.environ["CUDA_VISIBLE_DEVICES"] =','.join(map(str, [0]))
 
 import torchvision.transforms as transforms
 from torchvision.utils import save_image
@@ -29,7 +29,7 @@ import evaluate
 from shutil import copyfile
 
 
-dataset_base_path='../data/gowalla'  
+dataset_base_path='data/gowalla'  
  
 ##gowalla
 user_num=29858
@@ -49,7 +49,7 @@ if (os.path.exists(path_save_base)):
 else:
     os.makedirs(path_save_base)   
 result_file=open(path_save_base+'/results.txt','w+')#('./log/results_gcmc.txt','w+')
-copyfile('./train_gowalla.py', path_save_base+'/train_gowalla'+run_id+'.py')
+copyfile('code/train_gowalla.py', path_save_base+'/train_gowalla'+run_id+'.py')
 
 path_save_model_base='../newlossModel/'+dataset+'/s'+run_id
 if (os.path.exists(path_save_model_base)):
